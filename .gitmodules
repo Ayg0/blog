@@ -4,3 +4,9 @@
 [submodule "gettoknow/themes/hugo.386"]
 	path = gettoknow/themes/hugo.386
 	url = https://gitlab.com/maxlefou/hugo.386
+[submodule "gettoknow/public"]
+	path = gettoknow/public
+	url = https://github.com/Ayg0/gettoknow.github.io/
+[submodule "gettoknow/themes/hugo-theme-m10c"]
+	path = gettoknow/themes/hugo-theme-m10c
+	url = https://github.com/vaga/hugo-theme-m10c.git
