@@ -23,17 +23,18 @@ paginate = 8
     weight = 3
 
 [params]
-  author = "John Doe"
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  avatar = "ProgrammerHood.jpeg"
+  author = "Taha Ed-dafili"
+  description = "Enjoy your tour, as it's will be an interesting one."
   menu_item_separator = " - "
   [[params.social]]
     icon = "github"
     name = "Github"
-    url = "https://github.com/gohugoio"
+    url = "https://github.com/Ayg0"
   [[params.social]]
-    icon = "twitter"
-    name = "Twitter"
-    url = "https://twitter.com/gohugoio"
+    icon = "linkedin"
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/taha-ed-dafili-a17779213/"
 
   # Default theme
   #[params.style]
@@ -58,3 +59,11 @@ paginate = 8
   #  lightColor = "#d6d6d6"
   #  lightestColor = "#d3d3d3"
   #  primaryColor = "#ffffff"
+  
+  # Test theme
+[params.style]
+  darkestColor = "#242930"
+  darkColor = "#313841"
+  lightColor = "#CBD2D8"
+  lightestColor = "#ffffff"
+  primaryColor = "#65D2DA"

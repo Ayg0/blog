@@ -10,3 +10,6 @@
 [submodule "gettoknow/themes/hugo-theme-m10c"]
 	path = gettoknow/themes/hugo-theme-m10c
 	url = https://github.com/vaga/hugo-theme-m10c.git
+[submodule "gettoknow/themes/hugo-theme-nix"]
+	path = gettoknow/themes/hugo-theme-nix
+	url = https://github.com/LordMathis/hugo-theme-nix.git
