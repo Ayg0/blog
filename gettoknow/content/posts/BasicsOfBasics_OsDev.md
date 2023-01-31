@@ -9,9 +9,10 @@ tags: ["OsDev", "BareBones"]
 	This is the first blog that will discuss the main steps I followed to have it at this state. And also provide All resources I've used.
 ## Resources:
 - [OsDevWiki](https://wiki.osdev.org/Main_Page/)  
-- EMPTY
+- [Awesome Os](https://github.com/jubalh/awesome-os)
 - EMPTY
 - EMPTY
 
 ## STEPS:
 - ### [Building a Cross-Compiler]({{< ref "GccCrossCompiler.md" >}})
+- ### [Needed Knowledge to Procceed !!]({{< ref "OsDevKnowledge.md" >}})

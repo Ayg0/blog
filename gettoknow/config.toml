@@ -1,5 +1,5 @@
 baseURL = "https://ayg0.github.io/gettoknow.github.io/"
-title = "GitToKnow"
+title = "GetToKnow"
 languageCode = "en"
 DefaultContentLanguage = "en"
 theme = "hugo-theme-m10c"
