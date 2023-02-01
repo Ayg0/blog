@@ -16,3 +16,4 @@ tags: ["OsDev", "BareBones"]
 ## STEPS:
 - ### [Building a Cross-Compiler]({{< ref "GccCrossCompiler.md" >}})
 - ### [Needed Knowledge to Procceed !!]({{< ref "OsDevKnowledge.md" >}})
+- ### [Boot Sector]({{< ref "BootSector.md" >}})

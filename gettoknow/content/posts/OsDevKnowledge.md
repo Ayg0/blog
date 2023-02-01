@@ -9,4 +9,6 @@ tags: ["OsDev"]
 ```
 	Knowledge that will be and is really helpful and needed as an OsDev, don't worry it may look like a lot but ... there is no but it is a lot.
 ```
-### =>> [Boot Sequence](({{< ref "BootingSequence.md" >}})).
+### =>> [Boot Sequence]({{< ref "BootingSequence.md">}})
+### =>> [BIOS]({{< ref "BIOS.md">}})
+### =>> [Real/Protected/long Modes]({{< ref "OsModes.md">}})
