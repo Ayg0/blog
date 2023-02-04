@@ -2,6 +2,7 @@
 title: "BootSector"
 date: 2023-02-01T18:41:24+01:00
 draft: false
+tags: ["OsDev"]
 ---
 
 ``` C
@@ -48,6 +49,6 @@ draft: false
  And run it using:
 	$> qemu-system-x86_64 boot.bin
 
- If we did everything correctly we should have a new prompt open and saying at the end:
+ If we did everything correctly QEMU should output this:
 ```
-  ![how it should work](/static/media/pic/sh.png)
+![Example image](/gettoknow.github.io/s_BS.png)
