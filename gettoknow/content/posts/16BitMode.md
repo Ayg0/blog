@@ -43,5 +43,101 @@ tags: ["OsDev"]
           |       Interrupt Vector Table (1 KB)        |
 0x0       |____________________________________________|
 
- Well the BIOS is loader to the memory with all it's utilities and code, than the BIOS loads our code into address 0x7c00 so it's will be sure not to mess-up any data before, this will mean that our data will be offsetted with 0x7c00
+ Well the BIOS is loader to the memory with all it's utilities and code, then the BIOS loads our code into address 0x7c00 so it's will be sure not to mess-up any data before, this will mean that our data will be offsetted with 0x7c00, accessing any data will be like:
+```
+``` ASM
+	mov al, [data + 0x7c00] ; data should point to 'H', like C/C++ for example, but because of the offsetting we need to add 0x7c00 to the address then dereference it.
+	mov ah, 0x0e	; indecate the teletype output routine
+	int 0x10		; invoke the ISR
+
+	data:			; data will be the address of 'H'
+		db 'Hello', 0
+```
+```
+ Of course we can make our life easier by setting the org to 0x7c00 so it will automaticely add it to our addresses instead of us typing it each time:
+ 	[org 0x7c00]
+```
+### `=> The Stack:`
+```
+ The stack is a continues memory, that offers the solution to the limited amount of registers CPU have to hold temperory data, The stack offers two instructions PUSH and POP. Push allow us to store data into the top of stack, and pop allow us to retrieve the data at the top of the stack.
+
+ The stack can be implemented in different ways, in our case it's implemented by two Special purpose registers BP (Base Pointer) and SP (Stack Pointer), we set the base pointer to somewhere far away from other codes (BIOS code for example), to not overwrite any important data when expanding the stack. When Pushing data into the stack we increment SP to point into it, and pop get us the data pointed to by SP and than decrement it.
+```
+### `=> If ? If If If ? For Ifs:`
+```
+ Talking about coding an variables will make you wonder how can you use your everyday control structures in Assembly (if, else, for ...), Assembly offers instructions that will help you achieve that, and I'll give examples with the C code and it's alternative in Assembly.
+```
+### `If Else`
+``` C
+ int ax = 50;
+ int bx = 10;
+ if (ax > bx)
+	printf("%c", 'Y');
+ else
+	printf("%c", 'N');
+```
+
+``` ASM
+ mov ax, 50	; store 50 into ax
+ mov bx, 10
+ cmp ax, bx ; compare the two values
+ jg  yes	; if ax greater then bx jump to label yes
+ jmp no		; else jump to label no
+ 
+ yes:
+ 	mov al, 'Y'
+ 	jmp	print	; jmp to label print
+ no:
+ 	mov al, 'N'
+ print:			; print what ever in al
+ 	mov ah, 0x0e
+ 	int 0x10
+ end:
+	jmp end	; infinite loop
+; our magic number and padding
+times 510 -( $ - $$ ) db 0	
+dw 0xaa55
+```
+### `Add A Loop:`
+``` C
+ int cx = 5;
+ int bx = 10;
+ while (cx != 20){
+ if (cx > bx)
+	printf("%c", 'Y');
+ else
+	printf("%c", 'N');
+ printf("\n");
+ cx++;
+}
+```
+
+``` ASM
+mov cx, 5
+mov bx, 10
+
+looop:
+	cmp cx, 20
+	je  end		; jump to end if cx equal 20
+	cmp cx, bx
+	jg  yes
+	jmp no
+
+yes:
+	mov al, 'Y'
+	jmp	print
+no:
+	mov al, 'N'	
+print:
+	mov ah, 0x0e
+	int 0x10
+	mov al, 10	; 10 is new line in ascii
+	int 0x10
+	inc cx		; increment cx
+	jmp looop	; continue the loop
+end:
+	jmp end
+; our magic number and padding
+times 510 -( $ - $$ ) db 0	
+dw 0xaa55
 ```

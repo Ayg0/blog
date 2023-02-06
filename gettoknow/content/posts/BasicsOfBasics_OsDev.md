@@ -10,6 +10,7 @@ tags: ["OsDev", "BareBones"]
 ## Resources:
 - [OsDevWiki](https://wiki.osdev.org/Main_Page/)  
 - [Awesome Os](https://github.com/jubalh/awesome-os)
+- [Simple Operating System](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
 - EMPTY
 - EMPTY
 
