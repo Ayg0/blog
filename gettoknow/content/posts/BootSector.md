@@ -51,4 +51,4 @@ tags: ["OsDev"]
 
  If we did everything correctly QEMU should output this:
 ```
-![Example image](/gettoknow.github.io/s_BS.png)
+![QEMU WORKING](/gettoknow.github.io/s_BS.png)

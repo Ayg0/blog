@@ -12,15 +12,15 @@ paginate = 8
     url = "/"
     weight = 1
   [[menu.main]]
-    identifier = "tags"
-    name = "Tags"
+    identifier = "Sections"
+    name = "Sections"
     url = "/tags/"
     weight = 2
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
-    weight = 3
+  #[[menu.main]]
+  #  identifier = "about"
+  #  name = "About"
+  #  url = "/about/"
+  #  weight = 3
 
 [params]
   avatar = "ProgrammerHood.jpeg"

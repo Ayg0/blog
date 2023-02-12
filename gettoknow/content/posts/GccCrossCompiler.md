@@ -2,7 +2,7 @@
 title: "GccCrossCompiler"
 date: 2023-01-27T19:08:36+01:00
 draft: false
-tags: ["Compiler", OsDev]
+tags: ["Compiler", "OsDev"]
 ---
 
 # Cross-Compilers

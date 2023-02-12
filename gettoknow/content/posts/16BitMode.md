@@ -2,7 +2,7 @@
 title: "16BitMode"
 date: 2023-02-04T18:08:46+01:00
 draft: false
-tags: ["OsDev"]
+tags: ["OsDev", "BIOS"]
 ---
 
 ``` C
@@ -228,5 +228,7 @@ if (cx > bx)
  We may run into errors while loading because of exceeding the boundries or maybe some genius removed the floppy disk, so we need to know when it happens.
  It's worth noting that the Cylinder-Head-Sector (CHS) addressing is used.
 ```
-
-
+### `A Good Goodbye:`
+```
+ Well we've got it, all we can load data into memory, we can execute and run programs, we can do it all except... welll multi-tasking, massive memory access, memory protection ... You can see that we are missing some important feature for an half-modern operating system, that's why we will change our 16 bit mode into the 32 bit protected mode, that will offer a lot of complexe and head-breaking concepts, and well we will say good bye to our friend the BIOS and all of it's functionalities (BIOS only support 16 bit mode), let's meet again at the "32BitMode".
+```

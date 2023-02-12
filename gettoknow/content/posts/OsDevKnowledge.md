@@ -7,7 +7,7 @@ tags: ["OsDev"]
 
 # What and Why ?
 ```
-	Knowledge that will be and is really helpful and needed as an OsDev, don't worry it may look like a lot but ... there is no but it is a lot.
+	Knowledge that will be and is really helpful and needed as an OsDev, don't worry it may look like a lot but ... there is no but, it is a lot.
 ```
 ### =>> [Boot Sequence]({{< ref "BootingSequence.md">}})
 ### =>> [BIOS]({{< ref "BIOS.md">}})
