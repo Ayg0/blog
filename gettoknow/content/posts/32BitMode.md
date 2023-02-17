@@ -53,3 +53,8 @@ tags: ["OsDev"]
 	Well understanding what a GDT is a thing and defining it is an other, well you can visit the source code in YonaOS and find out how wierd it's to declare it, for example instead of declaring the address base (32 bit), you need to define 16 bit from the limit (20 bit), then define 24 bit of the base, and it's a miss, I don't know why it should be like this a joke ? revenge ? who knows.
 ### `; The Structure To Define A Segment:`
 ![GDT TABLE](/gettoknow.github.io/GDT_Entry.png)
+### `=> Switching to 32 bit mode:`
+```
+ After defining the GDT, the switch to 32 bit protected mode is straight forward. First we need to load the GDT we've constructed before with a special instruction called 'lgdt'. Then we will disable all interrupts with the instruction 'cli', and by that we will be done with the BIOS. After that we will set the first bit of a special control register cr0, to indicate that the CPU now is working in 32 bit mode.
+ Now all what we need to do is forcing the cpu to complete any instructions currently executed (pipeline issues) in the 16 bit mode (if there is any), to fully swich and be sure that everything is working in the right mode, we can do that by doing a far jump, which is like the standard jump but we add the target segment at the begining which will be the Code Segment for us, also updating our registers will be handy, as our old values for them are useless now.
+```
