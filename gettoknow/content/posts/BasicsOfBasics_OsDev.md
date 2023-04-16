@@ -14,10 +14,11 @@ tags: ["OsDev"]
 - ### [Boot Sector]({{< ref "BootSector.md" >}})
 - ### [Real Mode]({{< ref "16BitMode.md" >}})
 - ### [Protected Mode]({{< ref "32BitMode.md" >}})
+- ### [Kernel Dev]({{< ref "KernelDev.md" >}})
 
 ## Resources:
 - [OsDevWiki](https://wiki.osdev.org/Main_Page/)  
 - [Awesome Os](https://github.com/jubalh/awesome-os)
 - [Simple Operating System](https://www.cs.bham.ac.uk/~exr/lectures/opsys/10_11/lectures/os-dev.pdf)
-- EMPTY
+- [OS TUTORIAL](https://github.com/cfenollosa/os-tutorial)
 - EMPTY
